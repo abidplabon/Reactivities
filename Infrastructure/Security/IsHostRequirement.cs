@@ -20,8 +20,9 @@ namespace Infrastructure.Security
 
         public IsHostRequirementHandler(DataContext dbcontext,IHttpContextAccessor httpContextAccessor)
         {
-            _dbcontext = dbcontext;
+            
             _httpContextAccessor = httpContextAccessor;
+            _dbcontext = dbcontext;
         }
 
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, IsHostRequirement requirement)
